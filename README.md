@@ -19,7 +19,7 @@ REF img- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.analyticssteps.co
 
 Inner layers are kept frozen and the upper layers are trainable. 
 
-# There are two seperate notebooks class_prediction.ipynb and Deepvsfake.ipynb for two different models.
+# There are two seperate notebooks class_prediction.ipynb and Deepvsfake.ipynb for two different tasks.
 
 **Approach**
 
