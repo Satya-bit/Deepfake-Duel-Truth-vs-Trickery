@@ -1,4 +1,4 @@
-# Deepfake-Duel-Truth-vs-Trickery by Code Crafters
+## Deepfake-Duel-Truth-vs-Trickery by Code Crafters
 
 The description aims our approach for solving the tasks on classification using transfer Learning.
 
