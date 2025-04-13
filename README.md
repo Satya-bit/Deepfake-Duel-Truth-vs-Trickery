@@ -6,7 +6,12 @@ The description aims our approach for solving the tasks on classification using 
 
 =>**99.93%** on validation dataset in one epoch- Accuracy for labels-predicting classes: Animals, Human faces, vehicles.
 
-=>Accuracy for predicting fake vs Real
+![image](https://github.com/user-attachments/assets/e7533cbf-e488-424e-910c-7839a8f23f5b)
+
+=>**71.76%** on validation dataset in 3 epochs Accuracy for predicting fake vs Real
+
+![image](https://github.com/user-attachments/assets/3b42ae86-7dc3-4043-b342-5f8119a50088)
+
 
 ![image](https://github.com/user-attachments/assets/1d43cfc6-164f-49d1-850c-53e0a92315c5)
 
