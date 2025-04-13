@@ -16,7 +16,33 @@ Inner layers are kept frozen and the upper layers are trainable.
 
 **Approach**
 
-We used two separate models for training. One for training classes and another to train deep or fake.
+We used two separate models for training. One for training classes Animals, Human faces, vehicles and another to train deep or fake.
+
+To use flow from directory I need to change the folder structure. 
+
+For predicting classes (animal, human faces, vehicles)
+
+train----
+        -animal
+        -human faces
+        -vehicles
+
+validation----
+        -animal
+        -human faces
+        -vehicles
+
+For predicting classes (fake, real)
+
+train----
+       - fake(all three classses together)
+       - real(all three classses together)
+
+validation----
+       - fake(all three classses together)
+       - real(all three classses together)
+        
+**Note**- We didnot do anything with the test file.
 
 1)We used the **transfer learning** approach for model training. We used the Xception(for the classification of Animals, Human faces, vehicles) and VGG-16 (for classification of Deep vs Fake) model from Keras.
 
@@ -36,6 +62,8 @@ We used two separate models for training. One for training classes and another t
 
 1) Xception
 
+Outer layers- Global average pooling->Dropout for regularisation->one dense layer -> Output layer
+
 ![image](https://github.com/user-attachments/assets/d264366b-9466-439e-8381-5a763892e61e)
 
 REF image- https://www.researchgate.net/figure/Proposed-structure-of-Xception-network-used-within-each-stream-of-CNN_fig2_355098045
@@ -47,6 +75,8 @@ REF image- https://www.researchgate.net/figure/Proposed-structure-of-Xception-ne
 -Non-trainable params: 20,861,480 (frozen Xception using learned weights from Imagenet).
 
 2) VGG-16
+
+Outer layers-> Two fully connected layers -> Output layer
 
 ![image](https://github.com/user-attachments/assets/5e49d437-05da-4a07-9c55-1578b16b828b)
 
@@ -106,7 +136,7 @@ We understood the working of CNN architecture and how to use the concept of tran
 
 **Future works**
 
-To explore more CNN architecture for predicting deep vs fake images. Will also look into any preprocessing step helps or not. We were not able to look at the more approaches and research paper because of shortage of time and computational limitations.
+To explore more CNN architecture for predicting deep vs fake images. Will also look into any preprocessing step helps or not. We were not able to look at the more approaches and research paper because of shortage of time and computational limitations. Training for 100 epochs might boost up accuracy to 80% with less learning rate with great computational power.
 
 
 
