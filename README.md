@@ -19,13 +19,15 @@ REF img- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.analyticssteps.co
 
 Inner layers are kept frozen and the upper layers are trainable. 
 
+There are two seperate notebooks 
+
 **Approach**
 
 We used two separate models for training. One for training classes Animals, Human faces, vehicles and another to train deep or fake.
 
 To use flow from directory I need to change the folder structure. 
 
-For predicting classes (animal, human faces, vehicles)
+For predicting classes (animal, human faces, vehicles)- **The classes(human face, vehicles, animals) are saved in prediction.csv**
 
 train----
         -animal
@@ -37,7 +39,7 @@ validation----
         -human faces
         -vehicles
 
-For predicting classes (fake, real)
+For predicting classes (fake, real)- **The labels 0(fake) and 1(real) are saved in prediction2.csv**
 
 train----
        - fake(all three classses together)
@@ -47,7 +49,7 @@ validation----
        - fake(all three classses together)
        - real(all three classses together)
         
-**Note**- We didnot do anything with the test file.
+**Note**- **We didnot do anything with the test file. Just combined prediction1 and prediction2 into test.csv**
 
 1)We used the **transfer learning** approach for model training. We used the Xception(for the classification of Animals, Human faces, vehicles) and VGG-16 (for classification of Deep vs Fake) model from Keras.
 
